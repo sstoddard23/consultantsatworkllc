@@ -4,77 +4,51 @@
   <meta charset="utf-8" />
   <title>Consultants At Work, LLC</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Practical, owner-led consulting: setup, compliance calendars, website & domain, SOPs, and on-call problem solving." />
-
-  <!-- Open Graph -->
-  <meta property="og:title" content="Consultants At Work, LLC" />
-  <meta property="og:description" content="Practical, owner-led consulting that gets real work done." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://consultantsatworkllc.com/" />
+  <meta name="description" content="Practical consulting that gets real work done — entity setup, compliance calendars, domains, and on-call support." />
 
   <style>
-    :root{
-      --ink:#0f172a;      /* slate-900 */
-      --ink-2:#111827;    /* gray-900 */
-      --text:#e5e7eb;     /* slate-200 */
-      --muted:#cbd5e1;    /* slate-300 */
-      --brand:#22c55e;    /* green-500 */
-      --card:#111827;
-      --ring:#334155;     /* slate-600 */
-      --accent:#a78bfa;   /* violet-300 */
+    :root {
+      --green:#16a34a;        /* vivid green */
+      --green-soft:#22c55e;   /* lighter accent */
+      --bg:#f8faf8;
+      --ink:#0f172a;
+      --muted:#475569;
+      --border:#cbd5e1;
+      --shadow:rgba(0,0,0,0.08);
     }
-    *{box-sizing:border-box}
-    html,body{height:100%}
+    *{box-sizing:border-box;}
     body{
-      margin:0; font-family: ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;
-      color:var(--text); background: radial-gradient(1200px 600px at 20% -10%, #1f2937 0%, var(--ink) 60%) fixed;
+      margin:0;
+      font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;
+      background:var(--bg);
+      color:var(--ink);
     }
-    a{color:inherit}
-    .container{max-width:1040px;margin:0 auto;padding:32px}
-    .navbar{display:flex;align-items:center;justify-content:space-between; gap:16px}
-    .logo{
-      display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.2px
-    }
-    .logo-badge{
-      width:36px; height:36px; border-radius:12px; background:linear-gradient(135deg,var(--brand),#16a34a);
-      display:grid; place-items:center; font-size:20px; box-shadow:0 8px 24px rgba(34,197,94,.35);
-    }
+    a{text-decoration:none;color:inherit;}
+    .container{max-width:1040px;margin:0 auto;padding:32px;}
+    .navbar{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;}
+    .logo{display:flex;align-items:center;gap:8px;font-weight:800;}
+    .logo-badge{background:var(--green);color:white;width:36px;height:36px;display:grid;place-items:center;border-radius:10px;font-size:20px;}
     .btn{
-      display:inline-block; padding:12px 16px; border:1px solid var(--ring); border-radius:12px; text-decoration:none;
-      transition:transform .08s ease, background .2s ease, border-color .2s ease;
+      padding:10px 16px;border-radius:10px;border:1px solid var(--border);transition:all .2s ease;font-weight:600;
     }
-    .btn:hover{ background:rgba(255,255,255,.04); transform:translateY(-1px); border-color:#475569 }
-    .btn.primary{ border-color:transparent; background:linear-gradient(135deg,var(--brand),#16a34a); color:#052e16; font-weight:700 }
-    .btn.primary:hover{ transform:translateY(-1px) scale(1.01) }
-    .hero{padding:48px 0 18px; display:grid; gap:18px}
-    .headline{font-size: clamp(28px, 5.2vw, 52px); line-height:1.05; margin:4px 0}
-    .tag{display:inline-flex; align-items:center; gap:8px; font-size:14px; color:#bbf7d0; background:rgba(34,197,94,.12); border:1px solid rgba(34,197,94,.25); padding:6px 10px; border-radius:999px}
-    .sub{color:var(--muted); max-width:780px; font-size:clamp(15px, 1.6vw, 18px)}
-    .cta-row{display:flex; gap:12px; flex-wrap:wrap; margin-top:10px}
-    .grid{display:grid; gap:16px}
-    .cards{grid-template-columns: repeat( auto-fit, minmax(240px, 1fr) ); margin-top:28px}
+    .btn:hover{background:#e2fbe8;}
+    .btn.primary{background:var(--green);border-color:var(--green);color:white;}
+    .btn.primary:hover{background:var(--green-soft);}
+    .hero{padding:48px 0;}
+    .headline{font-size:clamp(28px,5vw,48px);line-height:1.1;margin:6px 0;}
+    .sub{max-width:720px;font-size:18px;color:var(--muted);}
+    .cta-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px;}
+    .card-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin-top:24px;}
     .card{
-      background:linear-gradient(180deg,rgba(255,255,255,.02),rgba(255,255,255,.01));
-      border:1px solid #1f2937; border-radius:16px; padding:18px; min-height:150px;
-      box-shadow: 0 8px 30px rgba(0,0,0,.25);
+      background:white;border:1px solid var(--border);border-radius:14px;padding:18px;box-shadow:0 4px 10px var(--shadow);
     }
-    .card h3{margin:0 0 8px; font-size:18px}
-    .card p{margin:0; color:var(--muted); font-size:14.5px; line-height:1.55}
-    .section{padding:36px 0}
-    .list{display:grid; grid-template-columns: repeat( auto-fit, minmax(260px, 1fr) ); gap:14px}
-    .li{
-      background:var(--card); border:1px dashed #1f2937; border-radius:14px; padding:14px 14px 14px 12px;
-      display:flex; gap:12px; align-items:flex-start;
-    }
-    .li-emoji{font-size:20px; line-height:1.2}
-    .li span{font-weight:700}
-    .foot{border-top:1px solid #1f2937; margin-top:28px; padding-top:22px; color:var(--muted); font-size:14px; display:flex; gap:8px; justify-content:space-between; flex-wrap:wrap}
-    .pill{padding:6px 10px; border-radius:999px; background:#0b1220; border:1px solid #1f2937; color:#e5e7eb; font-size:13px}
-    .note{font-size:13px; color:#94a3b8}
-    .kicker{color:#a7f3d0; font-weight:700; letter-spacing:.3px; text-transform:uppercase; font-size:12px}
-    .badge{display:inline-flex; gap:6px; align-items:center; background:#0b1220; border:1px solid #1f2937; padding:6px 10px; border-radius:999px; color:#dbeafe; font-size:13px}
-    .wrap{display:grid; gap:18px}
-    @media (min-width:900px){ .hero{grid-template-columns: 1.1fr .9fr; align-items:center } }
+    .card h3{margin:0 0 8px;color:var(--green);}
+    .card p{margin:0;color:var(--muted);font-size:15px;}
+    .section{padding:36px 0;}
+    .service{display:flex;gap:12px;background:white;border:1px solid var(--border);border-radius:12px;padding:14px;box-shadow:0 2px 6px var(--shadow);}
+    .emoji{font-size:22px;}
+    .service span{font-weight:700;}
+    .foot{margin-top:32px;padding-top:18px;border-top:1px solid var(--border);color:var(--muted);font-size:14px;display:flex;justify-content:space-between;flex-wrap:wrap;}
   </style>
 </head>
 <body>
@@ -93,104 +67,43 @@
 
     <!-- Hero -->
     <section class="hero">
-      <div class="wrap">
-        <span class="tag">✨ Practical help, zero fluff</span>
-        <h1 class="headline">Hands-on consulting that actually ships.</h1>
-        <p class="sub">We partner with owners to get the boring, critical stuff done: entity filings you approve, compliance calendars you control, websites that stay online, and processes that scale. We guide. <b>You decide.</b></p>
-        <div class="cta-row">
-          <a class="btn primary" href="mailto:info@consultantsatworkllc.com?subject=Quick%20Intro%20Call">Book a quick intro</a>
-          <a class="btn" href="#services">See services</a>
-        </div>
-        <span class="note">Owner-led accountability by design. We set it up; you stay in the driver’s seat.</span>
+      <h1 class="headline">We don’t just hand you a report — we hand you results.</h1>
+      <p class="sub">
+        Owner-led consulting built for follow-through. We set up your domain, compliance systems, and digital basics so you can stay focused on what matters.
+      </p>
+      <div class="cta-row">
+        <a class="btn primary" href="#services">Explore Services</a>
+        <a class="btn" href="mailto:info@consultantsatworkllc.com">Get in Touch</a>
       </div>
 
-      <div class="grid cards">
-        <div class="card">
-          <h3>🚀 Fast Start</h3>
-          <p>New business? We stand up domains, email, a clean landing page, and a compliance calendar in days, not months.</p>
-        </div>
-        <div class="card">
-          <h3>🧭 Owner-Led</h3>
-          <p>We structure decisions so you approve key filings, keep custody of accounts, and retain full control.</p>
-        </div>
-        <div class="card">
-          <h3>🧰 On-Call Execution</h3>
-          <p>No jargon. Just targeted help when you need it: websites, vendors, SOPs, and real-world troubleshooting.</p>
-        </div>
-        <div class="card">
-          <h3>✅ Deliverability & Basics</h3>
-          <p>MX/SPF/DKIM, backups, uptime hygiene, and checklists that keep things out of the ditch.</p>
-        </div>
+      <div class="card-grid">
+        <div class="card"><h3>🚀 Fast Start</h3><p>We stand up domains, email, and a basic website in days, not months.</p></div>
+        <div class="card"><h3>📋 Compliance & Filings</h3><p>Annual reports, renewals, and reminders built into a clear calendar you own.</p></div>
+        <div class="card"><h3>🧭 Owner-Led Systems</h3><p>Transparent setup so you approve every step and retain full control of accounts.</p></div>
+        <div class="card"><h3>🛠️ On-Call Support</h3><p>Need something fixed or clarified now? We make it work—no runaround.</p></div>
       </div>
     </section>
 
     <!-- Services -->
     <section id="services" class="section">
-      <div class="badge">Our Services</div>
-      <h2 class="headline" style="font-size: clamp(24px,3.6vw,36px); margin:10px 0 4px">What we do (and actually finish)</h2>
-      <p class="sub" style="margin-bottom:18px">Scope flexes to your needs. We keep it simple, transparent, and tightly executed.</p>
-
-      <div class="list">
-        <div class="li"><div class="li-emoji">🧱</div><div>
-          <span>Business setup, filings, and checklists</span><br/>
-          Articles, EIN, registered agent coordination, operating basics—structured so you approve and own every step.
-        </div></div>
-
-        <div class="li"><div class="li-emoji">📅</div><div>
-          <span>Compliance calendar & reminders</span><br/>
-          We build your recurring compliance plan (state, taxes, renewals) with clear ownership. No “mystery deadlines.”
-        </div></div>
-
-        <div class="li"><div class="li-emoji">🌐</div><div>
-          <span>Domain, email, and website</span><br/>
-          Domain registration, DNS (MX/SPF/DKIM), email hosting, and a tidy website you can hand to clients.
-        </div></div>
-
-        <div class="li"><div class="li-emoji">🧪</div><div>
-          <span>Process & SOPs</span><br/>
-          We document the way you work—intake, quoting, delivery—so you can grow without chaos.
-        </div></div>
-
-        <div class="li"><div class="li-emoji">🤝</div><div>
-          <span>Vendors & tooling</span><br/>
-          Pragmatic stacks (payments, bookkeeping, scheduling, CRM). We set up the essentials and hand you the keys.
-        </div></div>
-
-        <div class="li"><div class="li-emoji">🛟</div><div>
-          <span>On-call problem solving</span><br/>
-          Urgent fixes, odd jobs, “make this work today.” We triage, ship, and stabilize.
-        </div></div>
+      <h2 style="font-size:28px;margin-bottom:12px;color:var(--green)">Core Services</h2>
+      <div style="display:grid;gap:12px;">
+        <div class="service"><div class="emoji">🧱</div><div><span>Business Setup</span><br/>Articles, EIN, and foundational checklists you control.</div></div>
+        <div class="service"><div class="emoji">📅</div><div><span>Compliance Calendar</span><br/>Track recurring filings and reminders with ownership built in.</div></div>
+        <div class="service"><div class="emoji">🌐</div><div><span>Domain & Email Infrastructure</span><br/>MX/SPF/DKIM setup, backups, and simple uptime hygiene.</div></div>
+        <div class="service"><div class="emoji">🧪</div><div><span>Process & SOP Design</span><br/>Document your workflows for clarity and scalability.</div></div>
+        <div class="service"><div class="emoji">🤝</div><div><span>Vendor & Tool Setup</span><br/>Payment, scheduling, or CRM—built right and handed over cleanly.</div></div>
+        <div class="service"><div class="emoji">🛟</div><div><span>On-Call Execution</span><br/>Small fixes, tech sanity checks, or process cleanup—fast.</div></div>
       </div>
     </section>
 
-    <!-- Mini About / Values -->
-    <section class="section">
-      <div class="kicker">How we work</div>
-      <div class="grid cards" style="margin-top:14px">
-        <div class="card"><h3>Transparent</h3><p>Plain language, fixed scopes, and no surprise platforms that lock you out.</p></div>
-        <div class="card"><h3>Forward-looking</h3><p>We set foundations you won’t have to redo in six months.</p></div>
-        <div class="card"><h3>Security-minded</h3><p>Owner accounts, 2FA, principle of least privilege, and clear handoff.</p></div>
-      </div>
-    </section>
-
-    <!-- Contact -->
-    <section class="section" id="contact">
-      <div class="badge">Get in touch</div>
-      <h2 class="headline" style="font-size: clamp(24px,3.6vw,36px); margin:10px 0 4px">Need help this week?</h2>
-      <p class="sub">Send a quick note with what you’re trying to accomplish and your timeline. We’ll reply with a concrete next step.</p>
-      <div class="cta-row" style="margin-top:12px">
-        <a class="btn primary" href="mailto:info@consultantsatworkllc.com?subject=Project%20Inquiry&body=What%27s%20the%20outcome%20you%20want%2C%20by%20when%3F%20Share%20any%20links%20or%20files.">Email info@consultantsatworkllc.com</a>
-        <span class="pill">Response time: fast</span>
-      </div>
-      <div class="foot">
-        <span>© <span id="y"></span> Consultants At Work, LLC</span>
-        <span class="note">Owner-led by design. We guide; you approve; you own it.</span>
-      </div>
-    </section>
+    <!-- Footer -->
+    <div class="foot">
+      <span>© <span id="y"></span> Consultants At Work, LLC</span>
+      <span>info@consultantsatworkllc.com</span>
+    </div>
   </div>
 
-  <script>
-    document.getElementById('y').textContent = new Date().getFullYear();
-  </script>
+  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
 </body>
 </html>
